@@ -1,0 +1,1 @@
+# Practicas_Tercer_Parcial_IA_6to_Semestre
