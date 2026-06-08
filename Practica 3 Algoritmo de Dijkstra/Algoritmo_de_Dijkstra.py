@@ -17,6 +17,7 @@ en Visual Studio Code.
 """
 
 import math
+import os
 
 
 GRAFO = {
@@ -161,7 +162,7 @@ def generar_grafica_html(ruta, distancia_total):
     Este archivo se abre con Live Server para ver la gráfica en el navegador.
     """
 
-    archivo = "dijkstra_grafica.html"
+    archivo = os.path.join(os.path.dirname(__file__), "dijkstra_grafica.html")
     aristas_ruta = obtener_aristas_ruta(ruta)
     aristas_dibujadas = set()
 

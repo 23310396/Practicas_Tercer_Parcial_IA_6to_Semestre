@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Árbol Parcial Mínimo de Prim</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #1f2937;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1e3a8a;
+    }
+
+    .contenedor {
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 18px;
+    }
+
+    .panel {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    }
+
+    svg {
+      width: 100%;
+      height: 540px;
+      background: #eef2ff;
+      border-radius: 12px;
+      border: 1px solid #cbd5e1;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    th, td {
+      padding: 9px;
+      border-bottom: 1px solid #e2e8f0;
+      text-align: left;
+    }
+
+    th {
+      background: #eff6ff;
+    }
+
+    .costo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #16a34a;
+    }
+
+    .nota {
+      color: #475569;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Simulador del Árbol Parcial Mínimo de Prim</h1>
+
+  <div class="contenedor">
+    <section class="panel">
+      <h2>Resultado</h2>
+
+      <p class="nota">
+        Las aristas verdes forman el árbol parcial mínimo.
+        Las aristas grises pertenecen al grafo original.
+      </p>
+
+      <p>Costo total:</p>
+      <p class="costo">13</p>
+
+      <h2>Aristas seleccionadas</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Origen</th>
+            <th>Destino</th>
+            <th>Peso</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          
+        <tr>
+          <td>A</td>
+          <td>C</td>
+          <td>2</td>
+        </tr>
+        
+        <tr>
+          <td>C</td>
+          <td>B</td>
+          <td>1</td>
+        </tr>
+        
+        <tr>
+          <td>C</td>
+          <td>D</td>
+          <td>3</td>
+        </tr>
+        
+        <tr>
+          <td>B</td>
+          <td>E</td>
+          <td>5</td>
+        </tr>
+        
+        <tr>
+          <td>E</td>
+          <td>F</td>
+          <td>2</td>
+        </tr>
+        
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <svg viewBox="0 0 760 540">
+        
+        <line x1="120" y1="120" x2="330" y2="90"
+              stroke="#64748b" stroke-width="2" />
+
+        <rect x="211.0" y="92.0"
+              width="28" height="22" fill="#eef2ff" />
+
+        <text x="225.0" y="109.0" text-anchor="middle"
+              font-size="14" font-weight="bold">4</text>
+        
+        <line x1="120" y1="120" x2="230" y2="260"
+              stroke="#16a34a" stroke-width="5" />
+
+        <rect x="161.0" y="177.0"
+              width="28" height="22" fill="#eef2ff" />
+
+        <text x="175.0" y="194.0" text-anchor="middle"
+              font-size="14" font-weight="bold">2</text>
+        
+        <line x1="120" y1="120" x2="480" y2="250"
+              stroke="#64748b" stroke-width="2" />
+
+        <rect x="286.0" y="172.0"
+              width="28" height="22" fill="#eef2ff" />
+
+        <text x="300.0" y="189.0" text-anchor="middle"
+              font-size="14" font-weight="bold">7</text>
+        
+        <line x1="330" y1="90" x2="230" y2="260"
+              stroke="#16a34a" stroke-width="5" />
+
+        <rect x="266.0" y="162.0"
+              width="28" height="22" fill="#eef2ff" />
+
+        <text x="280.0" y="179.0" text-anchor="middle"
+              font-size="14" font-weight="bold">1</text>
+        
+        <line x1="330" y1="90" x2="430" y2="420"
+              stroke="#16a34a" stroke-width="5" />
+
+        <rect x="366.0" y="242.0"
+              width="28" height="22" fill="#eef2ff" />
+
+        <text x="380.0" y="259.0" text-anchor="middle"
+              font-size="14" font-weight="bold">5</text>
+        
+        <line x1="230" y1="260" x2="480" y2="250"
+              stroke="#16a34a" stroke-width="5" />
+
+        <rect x="341.0" y="242.0"
+              width="28" height="22" fill="#eef2ff" />
+
+        <text x="355.0" y="259.0" text-anchor="middle"
+              font-size="14" font-weight="bold">3</text>
+        
+        <line x1="230" y1="260" x2="430" y2="420"
+              stroke="#64748b" stroke-width="2" />
+
+        <rect x="316.0" y="327.0"
+              width="28" height="22" fill="#eef2ff" />
+
+        <text x="330.0" y="344.0" text-anchor="middle"
+              font-size="14" font-weight="bold">8</text>
+        
+        <line x1="480" y1="250" x2="650" y2="330"
+              stroke="#64748b" stroke-width="2" />
+
+        <rect x="551.0" y="277.0"
+              width="28" height="22" fill="#eef2ff" />
+
+        <text x="565.0" y="294.0" text-anchor="middle"
+              font-size="14" font-weight="bold">6</text>
+        
+        <line x1="430" y1="420" x2="650" y2="330"
+              stroke="#16a34a" stroke-width="5" />
+
+        <rect x="526.0" y="362.0"
+              width="28" height="22" fill="#eef2ff" />
+
+        <text x="540.0" y="379.0" text-anchor="middle"
+              font-size="14" font-weight="bold">2</text>
+        
+        
+        <circle cx="120" cy="120" r="27"
+                fill="#dbeafe" stroke="#1e3a8a" stroke-width="2" />
+
+        <text x="120" y="126" text-anchor="middle"
+              font-size="17" font-weight="bold">A</text>
+        
+        <circle cx="330" cy="90" r="27"
+                fill="#dbeafe" stroke="#1e3a8a" stroke-width="2" />
+
+        <text x="330" y="96" text-anchor="middle"
+              font-size="17" font-weight="bold">B</text>
+        
+        <circle cx="230" cy="260" r="27"
+                fill="#dbeafe" stroke="#1e3a8a" stroke-width="2" />
+
+        <text x="230" y="266" text-anchor="middle"
+              font-size="17" font-weight="bold">C</text>
+        
+        <circle cx="480" cy="250" r="27"
+                fill="#dbeafe" stroke="#1e3a8a" stroke-width="2" />
+
+        <text x="480" y="256" text-anchor="middle"
+              font-size="17" font-weight="bold">D</text>
+        
+        <circle cx="430" cy="420" r="27"
+                fill="#dbeafe" stroke="#1e3a8a" stroke-width="2" />
+
+        <text x="430" y="426" text-anchor="middle"
+              font-size="17" font-weight="bold">E</text>
+        
+        <circle cx="650" cy="330" r="27"
+                fill="#dbeafe" stroke="#1e3a8a" stroke-width="2" />
+
+        <text x="650" y="336" text-anchor="middle"
+              font-size="17" font-weight="bold">F</text>
+        
+      </svg>
+    </section>
+  </div>
+</body>
+</html>
